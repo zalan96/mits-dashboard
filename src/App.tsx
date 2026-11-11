@@ -1,5 +1,7 @@
-{
-  
+function App() {
+  return (
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-6 p-8 bg-gray-100">
+      {
 }
 <div className="w-80 p-8 bg-white rounded-lg border border-gray-200 shadow-lg">
   <h2 className="text-2xl font-bold text-gray-900 leading-tight">
@@ -35,4 +37,9 @@
   compliance. This comprehensive system allows restaurant owners to manage all
   aspects of their business efficiently.
 </p>;
-<div className="w-80 p-8 bg-white rounded-lg border border-gray-200 shadow-lg"></div>
+    </div>
+  );
+}
+
+export default App;
+
