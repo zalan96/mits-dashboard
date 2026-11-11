@@ -1,45 +1,69 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
 function App() {
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-6 p-8 bg-gray-100">
-      {
-}
-<div className="w-80 p-8 bg-white rounded-lg border border-gray-200 shadow-lg">
-  <h2 className="text-2xl font-bold text-gray-900 leading-tight">
-    ES2025 TRAINING HU S17 - Module B
-  </h2>
-  <p className="mt-2 text-base font-semibold text-gray-600">
-    SkillShare Academy - Dynamic Website
-  </p>
-  <p className="mt-4 text-sm text-gray-600 leading-relaxed line-clamp-3">
-    Create a server-side rendered administrative interface for SkillShare
-    Academy platform management with role-based access control and OWASP
-    security compliance. This comprehensive system allows restaurant owners to
-    manage all aspects of their business efficiently.
-  </p>
-</div>;
+      {/* Light Card */}
+      <Card className="w-80">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold leading-tight">
+            ES2025 TRAINING HU S17 - Module B
+          </CardTitle>
+          <CardDescription className="text-base font-semibold">
+            SkillShare Academy - Dynamic Website
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+          Create a server-side rendered administrative interface for SkillShare
+          Academy platform management with role-based access control and OWASP
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
+        </CardContent>
+      </Card>
 
-{
- 
-}
-<p className="mt-3 text-sm text-slate-300 leading-relaxed line-clamp-3">
-  Create a server-side rendered administrative interface for SkillShare Academy
-  platform management with role-based access control and OWASP security
-  compliance. This comprehensive system allows restaurant owners to manage all
-  aspects of their business efficiently.
-</p>;
+      {/* Dark Card */}
+      <Card className="w-80 bg-slate-900 border-slate-700">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold leading-tight text-white">
+            ES2025 TRAINING HU S17 - Module B
+          </CardTitle>
+          <CardDescription className="text-base font-semibold text-slate-400">
+            SkillShare Academy - Dynamic Website
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="text-sm text-slate-300 leading-relaxed line-clamp-3">
+          Create a server-side rendered administrative interface for SkillShare
+          Academy platform management with role-based access control and OWASP
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
+        </CardContent>
+      </Card>
 
-{
- 
-}
-<p className="mt-3 text-sm text-blue-700 leading-relaxed line-clamp-3">
-  Create a server-side rendered administrative interface for SkillShare Academy
-  platform management with role-based access control and OWASP security
-  compliance. This comprehensive system allows restaurant owners to manage all
-  aspects of their business efficiently.
-</p>;
+      {/* Colored Card */}
+      <Card className="w-80 bg-blue-50 border-blue-200">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold leading-tight text-blue-900">
+            ES2025 TRAINING HU S17 - Module B
+          </CardTitle>
+          <CardDescription className="text-base font-semibold text-blue-700">
+            SkillShare Academy - Dynamic Website
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="text-sm text-blue-700 leading-relaxed line-clamp-3">
+          Create a server-side rendered administrative interface for SkillShare
+          Academy platform management with role-based access control and OWASP
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
+        </CardContent>
+      </Card>
     </div>
   );
 }
 
 export default App;
-
