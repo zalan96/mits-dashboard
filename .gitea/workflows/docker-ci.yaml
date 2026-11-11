@@ -1,0 +1,23 @@
+name: Build and push docker image
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build the Docker image
+        run: docker build . --tag git.digitalent.skillsit.hu/${{ github.repository }}:latest
+
+      - name: docker login
+        run: echo "${{ secrets.PASS }}" | docker login git.digitalent.skillsit.hu -u ${{secrets.USER}} --password-stdin
+
+      - name: push to docker hub
+        run: docker push git.digitalent.skillsit.hu/${{ github.repository }}:latest
+
+      - uses: httpfoundation/pulldeck-deploy-action@v1
+        with:
+          image: git.digitalent.skillsit.hu/${{ github.repository }}
+          base-url: ${{ secrets.PULLDECK_BASE_URL }}
+          token: ${{ secrets.PULLDECK_TOKEN }}
